@@ -11,3 +11,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 800px) {
+    .equation-block {
+      width: 90%;
+    }
+}
