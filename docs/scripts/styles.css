@@ -1,0 +1,13 @@
+.equation-block {
+  border: black solid;
+  /*display: inline-block;*/
+  width: 30%;
+  flex-grow: 1;
+  margin:.5%;
+}
+
+.equation-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
