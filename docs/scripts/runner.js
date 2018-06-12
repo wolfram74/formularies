@@ -22,6 +22,7 @@ Vue.component('equation-list',{
   template:`
   <div class='equation-list'>
     <equation v-for='(equation, index) in equations'
+      v-if='equation.equation !="NA"'
       v-bind:equation='equation.equation'
       v-bind:id='equation.id'
       v-bind:bookPage='equation.bookPage'

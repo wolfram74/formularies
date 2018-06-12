@@ -1,83 +1,129 @@
 var equations = [
 
   {
-    equation:`NA`,
+    equation:`
+    j \\equiv
+    \\nabla \\xi^1
+    \\cdot \\nabla \\xi^2
+    \\times \\nabla \\xi^3 = det(\\frac{\\partial \\xi^i}{\\partial x^j})
+    `,
     id:"02.001",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"20",
+    label:"Jacobian definition",
+    description:"must be non-0 for a system of coordinates to be non-degenerate",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    R = (x^2 +y^2)^(1/2)
+    \\\\
+    \\phi = arcTan(y/x)
+    \\\\
+    Z = z
+    `,
     id:"02.002",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"20",
+    label:"Cylindrical coordinates",
+    description:"Cylindrical coordinates in terms of cartesian, has a jacobian of 1/R",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    r_0 = ((R-R_0)^2 +Z^2)^(1/2)
+    \\\\
+    \\zeta_0 = arcTan(\\frac{Z}{R-R_0})
+    \\\\
+    \\eta_0 = -\\phi
+    `,
     id:"02.003",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"20",
+    label:"Primitive toroidal coordinates",
+    description:"The Primitive toroidal coordinates in terms of Cylindrical coordinates. Jacobian is $&1/(r_0R)&$, $&R_0&$ is the major radius, distance from z-axis",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    j =
+    \\nabla \\psi
+    \\cdot \\nabla \\theta
+    \\times \\nabla \\zeta    `,
     id:"02.004",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"20",
+    label:"jacobian for general toroidal coordinates",
+    description:"assumed to be positive finite everywhere for well behavedness",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\theta(r_0, \\theta_0 + 2m\\pi, \\zeta_0+2n\\pi) =
+    \\theta(r_0, \\theta_0 , \\zeta_0) + 2m\\pi
+    \\\\
+    \\zeta(r_0, \\theta_0 + 2m\\pi, \\zeta_0+2n\\pi) =
+    \\zeta(r_0, \\theta_0 , \\zeta_0) + 2n \\pi
+    `,
     id:"02.005",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"21",
+    label:"Periodicity constraints on angular components",
+    description:"single valuedness on any finite loop, degenerate by integer turns at given points",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\psi(r_0, \\theta_0 + 2m\\pi, \\zeta_0+2n\\pi)
+    =
+    \\psi(r_0, \\theta_0 , \\zeta_0)
+    `,
     id:"02.006",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"21",
+    label:"constraints on general radial coordinate",
+    description:"must be single valued regardless of lap",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\theta = \\theta_0 + p_1(r_0,\\theta_0, \\zeta_0)
+    \\\\
+    \\zeta = \\zeta_0 + p_2(r_0,\\theta_0, \\zeta_0)
+
+    `,
     id:"02.007",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"21",
+    label:"form of general angular coordinates",
+    description:"periodic functions can be appended to primitive coordinate to generate arbitrary coordinates",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\vec A =
+    A_1 \\hat x +
+    A_2 \\hat y +
+    A_3 \\hat z
+    `,
     id:"02.008",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"22",
+    label:"cartesian components",
+    description:"most conventional basis",
   },
 
   {
-    equation:`NA`,
+    equation:`\\vec A = A_i \\nabla \\xi^i`,
     id:"02.009",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"22",
+    label:"Covariant representation",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    A_i = \\frac{\\epsilon_{ijk}}{j}
+    \\nabla \\xi^j \\times \\nabla \\xi ^k \\cdot \\vec A
+    \\\\
+    A_1 = \\frac{1}{j} \\nabla \\xi^2 \\times \\nabla \\xi ^3 \\cdot \\vec A
+    `,
     id:"02.010",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"22",
+    label:"Covariant component",
+    description:"a general covariant vector component using levi-civita notation and an explicit example",
   },
 
   {
