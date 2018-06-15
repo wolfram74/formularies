@@ -2,7 +2,7 @@ var equations = [
 
   {
     equation:`
-    j \\equiv
+    \\jmath \\equiv
     \\nabla \\xi^1
     \\cdot \\nabla \\xi^2
     \\times \\nabla \\xi^3 = det(\\frac{\\partial \\xi^i}{\\partial x^j})
@@ -43,7 +43,7 @@ var equations = [
 
   {
     equation:`
-    j =
+    \\jmath =
     \\nabla \\psi
     \\cdot \\nabla \\theta
     \\times \\nabla \\zeta    `,
@@ -115,10 +115,10 @@ var equations = [
 
   {
     equation:`
-    A_i = \\frac{\\epsilon_{ijk}}{j}
+    A_i = \\frac{\\epsilon_{ijk}}{2\\jmath}
     \\nabla \\xi^j \\times \\nabla \\xi ^k \\cdot \\vec A
     \\\\
-    A_1 = \\frac{1}{j} \\nabla \\xi^2 \\times \\nabla \\xi ^3 \\cdot \\vec A
+    A_1 = \\frac{1}{\\jmath} \\nabla \\xi^2 \\times \\nabla \\xi ^3 \\cdot \\vec A
     `,
     id:"02.010",
     bookPage:"22",
@@ -127,129 +127,167 @@ var equations = [
   },
 
   {
-    equation:`NA`,
+    equation:`\\tilde A_j = A_i \\frac{\\partial \\xi^i}{\\partial \\tilde \\xi^j}`,
     id:"02.011",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"23",
+    label:"covariant transform",
+    description:"How to transform a covariant vector component",
   },
 
   {
-    equation:`NA`,
+    equation:`(\\nabla x^k)_j = \\delta_{ki} \\frac{\\partial x^i}{\\partial \\xi ^j}`,
     id:"02.012",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"23",
+    label:"Basis vector covariant transform",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`A^i = \\vec A \\cdot \\nabla \\xi^i`,
     id:"02.013",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"23",
+    label:"Contra variant component",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\tilde A^j = A^i \\frac{\\partial \\tilde \\xi^j}{\\partial \\xi^i}
+    `,
     id:"02.014",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"23",
+    label:"contra variant transform",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\vec A = \\frac{1}{\\jmath}(
+      A^1\\nabla\\xi^2\\times \\nabla \\xi ^3
+      +A^2\\nabla\\xi^3\\times \\nabla \\xi ^1
+      +A^3\\nabla\\xi^1\\times \\nabla \\xi ^2
+      )=
+    \\\\
+    \\frac{\\epsilon_{ijk}}{2\\jmath}
+    A^i\\nabla\\xi^j\\times \\nabla \\xi ^k
+    `,
     id:"02.015",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"23",
+    label:"expanding in covariant basis",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`A^i = A_j \\nabla \\xi^i \\cdot \\nabla \\xi^j
+    \\equiv g^{ij}A_j
+    `,
     id:"02.016",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"24",
+    label:"Relating covariant and contravariant components",
+    description:"produced from combining equations 9 and 13",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    g^{ij}
+    \\equiv
+    \\nabla \\xi^i \\cdot \\nabla \\xi^j
+    =
+    \\frac{\\partial \\xi ^i}{\\partial x^k}
+    \\frac{\\partial \\xi ^j}{\\partial x^k}
+    `,
     id:"02.017",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"24",
+    label:"definition of the contravariant metric tensor",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`A_i=g_{ij}A^j`,
     id:"02.018",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"24",
+    label:"additional constraint for covariant metric",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    g_{ij}
+    =
+    \\frac{\\partial x^k}{\\partial \\xi ^i}
+    \\frac{\\partial x^k}{\\partial \\xi ^j}
+    `,
     id:"02.019",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"24",
+    label:"expression for the covariant metric tensor",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`g = \\frac{1}{\\jmath^2}`,
     id:"02.020",
-    bookPage:"NA",
+    bookPage:"24",
     label:"NA",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    d^3x = g^{1/2} d\\xi^1 d\\xi^2 d\\xi^3
+    \\\\
+    ds^2=g_{ij} d\\xi^i d\\xi^j
+    `,
     id:"02.021",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"24",
+    label:" general Volume and length elements",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\vec A \\cdot \\vec B =
+     A_i \\nabla \\xi^i \\cdot \\nabla \\xi^j B_j =
+     A_i g^{ij}  B_j =
+     A_i B^j
+    `,
     id:"02.022",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"24",
+    label:"generalizing dot product",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`W^i =
+    \\nabla \\xi^i
+    \\cdot \\nabla \\xi^j
+    \\times \\nabla \\xi^k  A_j B_k=
+    \\jmath \\epsilon_{ijk} A_j B_k `,
     id:"02.023",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"24",
+    label:"generalizing the cross product as contravariant vectors",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`W_i = \\frac{\\epsilon_{ijk}}{\\jmath} A^j B^k`,
     id:"02.024",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"25",
+    label:"Covariant components of cross product",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`\\nabla = \\nabla \\xi^i \\frac{\\partial}{\\partial\\xi^i}`,
     id:"02.025",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"25",
+    label:"gradient of a scalar",
     description:"NA",
   },
 
   {
     equation:`NA`,
     id:"02.026",
-    bookPage:"NA",
+    bookPage:"25",
     label:"NA",
     description:"NA",
   },
@@ -257,7 +295,7 @@ var equations = [
   {
     equation:`NA`,
     id:"02.027",
-    bookPage:"NA",
+    bookPage:"25",
     label:"NA",
     description:"NA",
   },
@@ -265,7 +303,7 @@ var equations = [
   {
     equation:`NA`,
     id:"02.028",
-    bookPage:"NA",
+    bookPage:"25",
     label:"NA",
     description:"NA",
   },
@@ -273,7 +311,7 @@ var equations = [
   {
     equation:`NA`,
     id:"02.029",
-    bookPage:"NA",
+    bookPage:"25",
     label:"NA",
     description:"NA",
   },
