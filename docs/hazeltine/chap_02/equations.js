@@ -516,7 +516,7 @@ var equations = [
       + \\frac{e}{c}\\frac{d\\vec x}{dt} \\times \\vec B
     `,
     id:"02.045",
-    bookPage:"31",
+    bookPage:"30",
     label:"the lorentz Force law",
     description:"NA",
   },
@@ -532,7 +532,7 @@ var equations = [
     = \\jmath (\\partial_{x^j} A_k - \\partial_{x^k} A_j)
     `,
     id:"02.046",
-    bookPage:"31",
+    bookPage:"30",
     label:"Defining fields in terms of potentials",
     description:"NA",
   },
@@ -540,7 +540,7 @@ var equations = [
   {
     equation:`\\vec p = m \\vec v +\\frac{e}{c}\\vec A`,
     id:"02.047",
-    bookPage:"31",
+    bookPage:"30",
     label:"Canonical momentum for charged particles",
     description:"NA",
   },
@@ -548,7 +548,7 @@ var equations = [
   {
     equation:`H=\\frac{1}{2m}|\\vec p - \\frac{e}{c} \\vec A|^2+e\\Phi`,
     id:"02.048",
-    bookPage:"31",
+    bookPage:"30",
     label:"E&M hamiltonian",
     description:"NA",
   },
@@ -564,129 +564,171 @@ var equations = [
     \\nabla\\cdot \\vec B = 0
     `,
     id:"02.049",
-    bookPage:"31",
+    bookPage:"30",
     label:"Maxwell's equations",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\rho_c(\\vec x, t) = \\Sigma_s e_s n_s(\\vec x, t)
+    \\\\
+    n_s(\\vec x, t) = \\Sigma_{i=1}^n \\delta(\\vec x - \\vec x^i_s(t))
+    `,
     id:"02.050",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"31",
+    label:"defining total charge density",
+    description:"",
   },
 
   {
-    equation:`NA`,
+    equation:`\\vec J(\\vec x, t) =
+    \\Sigma_s e_s \\vec v_s(\\vec x, t) n_s(\\vec x, t)`,
     id:"02.051",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"31",
+    label:"Current density defined",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`\\partial_t \\rho + \\nabla \\cdot \\vec J = 0`,
     id:"02.052",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"31",
+    label:"Charge conservation",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`\\lambda_D \\equiv (\\frac{T}{4\\pi n_e e^2})^{1/2}`,
     id:"02.053",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"32",
+    label:"The debye length",
+    description:"Temperature in units of energy, e the electron charge",
   },
 
   {
-    equation:`NA`,
+    equation:`\\nabla \\cdot \\vec J = 0`,
     id:"02.054",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"32",
+    label:" Electromagnetic quasineutrality approximation",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    v_e = (\\frac{2T}{m_e})^{1/2}
+    \\\\
+    \\Omega_e = \\frac{eB}{m_e c}
+    `,
     id:"02.055",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"32",
+    label:"electron thermal velocity and gyrofrequency",
+    description:"the gyrofrequency provides a speed ceiling where eq2.54 is valid",
   },
 
   {
-    equation:`NA`,
+    equation:`\\nabla \\times \\vec B = \\frac{4 \\pi}{c}\\vec J`,
     id:"02.056",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"33",
+    label:"Amperes law approximation",
+    description:"valid for time scales long enough for EM waves to cover relevant distances",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    v_\\parallel (t) = v_\\parallel (0) + \\frac{e}{m} E_\\parallel t
+    \\\\
+    v_\\bot (t) =
+    v_\\bot[\\hat e_2 cos(\\Omega t) - \\hat e_3 sin(\\Omega t)]
+    + c \\frac{\\vec E \\times \\vec B}{B^2}
+    `,
     id:"02.057",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"33",
+    label:"solutions for uniform fields",
+    description:"$&\\hat e_i&$ denotes unit vectors, last part referred to as E cross B drift",
   },
 
   {
-    equation:`NA`,
+    equation:`\\hat b \\cdot \\hat e_2 \\times \\hat e_3 = 1`,
     id:"02.058",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"33",
+    label:"orthnormality constraint",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\vec x (t) = \\vec X(t)+ \\vec r(t)
+    \\\\
+    \\vec r(t) = \\rho[
+      \\hat e_2 sin(\\Omega t) + \\hat e_3 cos(\\Omega t)
+    ]
+    \\\\
+    \\rho = v_\\bot/\\Omega
+    `,
     id:"02.059",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"33",
+    label:"position solutions for uniform field",
+    description:"broken into gyrating and non-gyrating components, rho is the gyroradius",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\vec{ \\dot X } (t) =
+    c \\frac{\\vec E \\times \\vec B}{B^2}
+    + \\hat b \\frac{e}{m} E_\\parallel t
+    `,
     id:"02.060",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"33",
+    label:"non-gyrating velocity",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    1 \\gg \\delta
+    \\approx \\frac{\\rho |\\nabla B|}{B} ,
+    \\frac{1}{\\Omega B}
+    \\frac{d B}{d t}
+    `,
     id:"02.061",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"34",
+    label:"definition of slow changing",
+    description:"stating by what comparison a field is considered to be changing slowly in space or time",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\delta \\frac{d^2 \\vec x}{ dt^2} =
+    \\frac{e}{m}\\vec E +
+    \\frac{e}{mc} \\vec {\\dot x} \\times \\vec B
+
+    `,
     id:"02.062",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"34",
+    label:"perturbative expansion of lorentz equation",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\vec x(t) =
+    \\vec X(t) +
+    \\Sigma_{i=1}^\\infty \\delta^i \\vec r_i(\\gamma(t),t)
+    `,
     id:"02.063",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"34",
+    label:"asserted form of solution to lorentz equation",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`\\vec {\\dot X}(t) =
+    \\Sigma_{i=1}^\\infty \\delta^i \\vec u_i(t)`,
     id:"02.064",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"34",
+    label:"expansion of non-gyrating velocity",
+    description:"using the same expansion parameter as 2.63",
   },
 
   {
