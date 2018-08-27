@@ -6,12 +6,24 @@ import sys
 import os
 import templates
 
-chap_num, equation_count = [ int(num) for num in sys.argv[-2:]]
-print(chap_num, equation_count)
-collaborators = ['jacob', 'eric', 'peter']
-sub_count = equation_count/len(collaborators)
-remainder = equation_count % len(collaborators)
+def label_calc(target, numbers):
+  label = "%s-%s"
+  for index in range(len(numbers)):
+    number = numbers[index]
+    if target <= number:
+      return label % (index+1, target)
+    target-=number
 
+chap_num = int(sys.argv[1])
+sub_equations_count = [ int(num) for num in sys.argv[2:]]
+
+print(chap_num, sub_equations_count)
+
+collaborators = ['jacob', 'eric', 'bret', 'peter']
+
+total_equations = sum(sub_equations_count)
+sub_count = total_equations/len(collaborators)
+remainder = total_equations % len(collaborators)
 folder = "chap_%02d" % chap_num
 os.mkdir(folder)
 view = open(folder+'/view.html', 'w')
@@ -33,7 +45,10 @@ for collab_index in range(len(collaborators)):
   equations = open(folder+'/%s_equations.js'%collab, 'w')
   equations.write('var %s_equations = [\n' % collab)
   for eqn_num in range(low_num, high_num):
-      equations.write(templates.equation_template % (chap_num, eqn_num+1))
+    label='NA'
+    if len(sub_equations_count)>1:
+      label = label_calc(eqn_num+1, sub_equations_count)
+    equations.write(templates.equation_template % (chap_num, eqn_num+1, label))
   equations.write(']')
   equations.close()
   stitcher.write('equations = equations.concat(%s_equations)\n'%collab)
