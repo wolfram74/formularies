@@ -6,7 +6,9 @@ import sys
 import os
 chap_num, equation_count = [ int(num) for num in sys.argv[-2:]]
 print(chap_num, equation_count)
-
+collaborators = ['jacob', 'eric', 'peter']
+sub_count = equation_count/len(collaborators)
+remainder = equation_count % len(collaborators)
 equation_template = '''
   {
     equation:`NA`,
@@ -34,23 +36,32 @@ view_template = '''
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 <script type="text/javascript" src='../../scripts/vue@2.2.1.js'></script>
-<script type="text/javascript" src='./equations.js'></script>
+%s
 <script type="text/javascript" src='../../scripts/runner.js'></script>
 <link rel='stylesheet' type="text/css" href='../../scripts/styles.css'>
 
 </html>
-
-
 '''
 
 folder = "chap_%02d" % chap_num
 os.mkdir(folder)
 view = open(folder+'/view.html', 'w')
-view.write(view_template % (chap_num, chap_num))
+eqn_links = ''
+for collab in collaborators:
+  eqn_links += '''
+  <script type="text/javascript" src='./%s_equations.js'></script>
+  ''' % collab
+view.write(view_template % (chap_num, chap_num, eqn_links))
 view.close()
-equations = open(folder+'/equations.js', 'w')
-equations.write('var equations = [\n')
-for eqn_num in range(equation_count):
-    equations.write(equation_template % (chap_num, eqn_num+1))
-equations.write(']')
-equations.close()
+for collab_index in range(len(collaborators)):
+  collab = collaborators[collab_index]
+  low_num = collab_index*sub_count
+  high_num = (collab_index+1)*sub_count
+  if collab == 'peter':
+    high_num+=remainder
+  equations = open(folder+'/%s_equations.js'%collab, 'w')
+  equations.write('var equations = [\n')
+  for eqn_num in range(low_num, high_num):
+      equations.write(equation_template % (chap_num, eqn_num+1))
+  equations.write(']')
+  equations.close()
