@@ -63,7 +63,7 @@ var equations = [
 
   {
     equation:`
-      \\frac{d}{dt}(\\partial_{\\dot q_j}L
+      \\frac{d}{dt}(\\partial_{\\dot q_j}L)
       -\\partial_{q_j}L = 0
       \\\\
       L^\\prime(q, \\dot q, t) = L(q, \\dot q, t) + \\frac{dF}{dt}
@@ -75,146 +75,210 @@ var equations = [
   },
 
   {
-    equation:`NA`,
+    equation:`
+    Q_j = -\\partial_{q_j} U + \\frac{d}{dt}(\\partial_{\\dot q_j}U)
+    `,
     id:"01.058",
     bookPage:"22",
     label:"NA",
-    description:"NA",
+    description:"Including velocities in the potential",
   },
 
   {
-    equation:`NA`,
+    equation:`L=T-U`,
     id:"01.059",
     bookPage:"22",
     label:"NA",
-    description:"NA",
+    description:"lagrangian still valid",
   },
 
   {
-    equation:`NA`,
+    equation:`\\vec F = q(\\vec E + (\\vec v \\times \\vec B))`,
     id:"01.060",
     bookPage:"22",
-    label:"NA",
-    description:"NA",
+    label:"Lorentz forcelaw",
+    description:"an example of a velocity dependent force and implicitly a velocity dependent potential",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\vec E = -\\nabla \\phi - \\partial_t \\vec A
+    \\\\
+    \\vec B = - \\nabla \\times \\vec A
+
+    `,
     id:"01.061",
     bookPage:"22",
-    label:"NA",
-    description:"NA",
+    label:"Potential expressions for E and B",
+    description:"Introducing a scalar and vector potential for electric and magnetic fields",
   },
 
   {
-    equation:`NA`,
+    equation:`U = q\\phi - q \\vec A \\cdot \\vec v`,
     id:"01.062",
     bookPage:"22",
-    label:"NA",
-    description:"NA",
+    label:"EM potential energy",
+    description:"A single scalar potential for a charged particle in an EM system",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    L = \\frac{1}{2}mv^2 - q\\phi + q \\vec A \\cdot \\vec v
+    `,
     id:"01.063",
     bookPage:"22",
-    label:"NA",
+    label:"EM langrangian",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    m \\ddot x =
+    q(
+      v_x \\partial_x A_x
+      +v_y \\partial_x A_y
+      +v_z \\partial_x A_z
+      )
+    -q(\\partial_x\\phi - \\frac{dA_x}{dt})
+    `,
     id:"01.064",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"23",
+    label:"the lagrangian equation for x",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\frac{dA_x}{dt} =
+    \\partial_t A_x + \\vec v \\cdot \\nabla A_x
+    \\\\
+    = \\partial_t A_x
+    + v_x \\partial_x A_x
+      +v_y \\partial_y A_y
+      +v_z \\partial_z A_z
+    `,
     id:"01.065",
-    bookPage:"NA",
+    bookPage:"23",
     label:"NA",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    (\\vec V \\times \\vec B)_x =
+    v_y(\\partial_x A_y-\\partial_y A_x)
+    +v_z(\\partial_x A_z-\\partial_z A_x)
+    \\\\
+    m\\ddot x = q(E_x+(\\vec V \\times \\vec B)_x)
+    `,
     id:"01.066",
-    bookPage:"NA",
+    bookPage:"23",
     label:"NA",
-    description:"NA",
+    description:"demonstrating the equivalence of the lagrange equation and the lorentz force law",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\mathcal{F} = \\frac{1}{2}
+    \\Sigma_i(
+      k_xv_{ix}^2
+      + k_yv_{iy}^2
+      + k_zv_{iz}^2
+      )
+    `,
     id:"01.067",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"23",
+    label:"rayleigh's dissipation function",
+    description:"i is summed over the particles in the system",
   },
 
   {
-    equation:`NA`,
+    equation:`\\vec F_f = -\\nabla_v \\mathcal{F}`,
     id:"01.068",
-    bookPage:"NA",
+    bookPage:"24",
     label:"NA",
-    description:"NA",
+    description:"A compact expression for friction forces from the dissipation function",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    Q_j
+    = \\Sigma_i \\vec F_{f_i} \\cdot \\partial_{q_j}\\vec r_i
+    = -\\Sigma \\nabla_v \\mathcal{F} \\cdot \\partial_{q_j}\\vec r_i
+    \\\\
+    = -\\Sigma \\nabla_v \\mathcal{F} \\cdot \\partial_{\\dot q_j}\\vec{\\dot r_i}
+    \\\\
+    = - \\partial_{\\dot q_j} \\mathcal{F}
+    `,
     id:"01.069",
-    bookPage:"NA",
+    bookPage:"24",
     label:"NA",
-    description:"NA",
+    description:"Generalized force of friction",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\frac{d}{dt}(\\partial_{\\dot q_j}L)
+      -\\partial_{q_j}L + \\partial_{\\dot q_j} \\mathcal{F}= 0
+    `,
     id:"01.070",
-    bookPage:"NA",
+    bookPage:"24",
     label:"NA",
-    description:"NA",
+    description:"Lagrangians including non-conservative drags",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    T = M_0
+    + \\Sigma_j M_j\\dot q_j
+    +\\frac{1}{2}\\Sigma_{j,k} M_{jk} \\dot q_j \\dot q_k
+    `,
     id:"01.071",
-    bookPage:"NA",
-    label:"NA",
+    bookPage:"25",
+    label:"Generalized kinetic energy",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    M_0 = \\frac{1}{2}\\Sigma_i m_i (\\partial_t \\vec r_i)^2
+    \\\\
+    M_j = \\Sigma_i m_i \\partial_t \\vec r_i \\cdot \\partial_{q_j} \\vec r_i
+    \\\\
+    M_{jk} = \\Sigma_i m_i
+    \\partial_{q_j} \\vec r_i \\cdot \\partial_{q_k} \\vec r_i
+    `,
     id:"01.072",
-    bookPage:"NA",
+    bookPage:"25",
     label:"NA",
-    description:"NA",
+    description:"expressing the mass-like quantities in terms of r.",
   },
 
   {
-    equation:`NA`,
+    equation:`T=T_0+T_1+T_2`,
     id:"01.073",
-    bookPage:"NA",
+    bookPage:"25",
     label:"NA",
-    description:"NA",
+    description:"Kinetic energies in terms of powers of velocity.",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\partial_{\\dot x_i} T = m\\dot x_i
+    \\\\
+    \\frac{d}{dt}(m\\dot x_i) = F_{x_i}
+    `,
     id:"01.074",
-    bookPage:"NA",
+    bookPage:"26",
     label:"NA",
-    description:"NA",
+    description:"rederiving newtons equations of motion with cartesian coordinates",
   },
 
   {
-    equation:`NA`,
+    equation:`T=\\frac{1}{2}m(\\dot r^2+(r \\dot \\theta)^2`,
     id:"01.075",
-    bookPage:"NA",
+    bookPage:"26",
     label:"NA",
-    description:"NA",
+    description:"kinetic energy in polar coordinates",
   },
 ]
