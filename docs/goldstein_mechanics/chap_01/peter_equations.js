@@ -1,65 +1,83 @@
 var equations = [
-
+//page 11 makes me think the type setting in the pdf is just rubbish
   {
-    equation:`NA`,
+    equation:`
+    \\partial_{\\dot q_j} \\vec v_i
+    = \\partial_{q_j}\\vec r_i
+    `,
     id:"01.051",
-    bookPage:"NA",
+    bookPage:"20",
     label:"NA",
-    description:"NA",
+    description:"a relationship between configuration velocities and cartesian velocities",
   },
 
   {
-    equation:`NA`,
+    equation:`\\Sigma(
+      \\frac{d}{dt}(\\partial_{\\dot q_j}T)
+      - \\partial_{q_j}T - Q_j
+      )\\delta q_j=0`,
     id:"01.052",
-    bookPage:"NA",
+    bookPage:"20",
     label:"NA",
     description:"NA",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\frac{d}{dt}(\\partial_{\\dot q_j}T)
+      - \\partial_{q_j}T = Q_j`,
     id:"01.053",
-    bookPage:"NA",
+    bookPage:"20",
     label:"NA",
-    description:"NA",
+    description:"n lagrange-ish equations",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    Q_j = -\\partial_{q_j} V
+    `,
     id:"01.054",
-    bookPage:"NA",
+    bookPage:"21",
     label:"NA",
-    description:"NA",
+    description:"general force expression from a scalar potential",
   },
 
   {
-    equation:`NA`,
+    equation:`
+    \\frac{d}{dt}(\\partial_{\\dot q_j}T
+    -\\partial_{q_j}(T-V)=0
+    `,
     id:"01.055",
-    bookPage:"NA",
+    bookPage:"21",
     label:"NA",
-    description:"NA",
+    description:"a reformulation of eq 53",
   },
 
   {
-    equation:`NA`,
+    equation:`L=T-V`,
     id:"01.056",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"21",
+    label:"lagrangian",
+    description:"defining the lagrangian",
   },
 
   {
-    equation:`NA`,
+    equation:`
+      \\frac{d}{dt}(\\partial_{\\dot q_j}L
+      -\\partial_{q_j}L = 0
+      \\\\
+      L^\\prime(q, \\dot q, t) = L(q, \\dot q, t) + \\frac{dF}{dt}
+    `,
     id:"01.057",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
+    bookPage:"21",
+    label:"Lagrange equations",
+    description:"another way to write eq 53 and a family of possible transformations",
   },
 
   {
     equation:`NA`,
     id:"01.058",
-    bookPage:"NA",
+    bookPage:"22",
     label:"NA",
     description:"NA",
   },
@@ -67,7 +85,7 @@ var equations = [
   {
     equation:`NA`,
     id:"01.059",
-    bookPage:"NA",
+    bookPage:"22",
     label:"NA",
     description:"NA",
   },
@@ -75,7 +93,7 @@ var equations = [
   {
     equation:`NA`,
     id:"01.060",
-    bookPage:"NA",
+    bookPage:"22",
     label:"NA",
     description:"NA",
   },
@@ -83,7 +101,7 @@ var equations = [
   {
     equation:`NA`,
     id:"01.061",
-    bookPage:"NA",
+    bookPage:"22",
     label:"NA",
     description:"NA",
   },
@@ -91,7 +109,7 @@ var equations = [
   {
     equation:`NA`,
     id:"01.062",
-    bookPage:"NA",
+    bookPage:"22",
     label:"NA",
     description:"NA",
   },
@@ -99,7 +117,7 @@ var equations = [
   {
     equation:`NA`,
     id:"01.063",
-    bookPage:"NA",
+    bookPage:"22",
     label:"NA",
     description:"NA",
   },
