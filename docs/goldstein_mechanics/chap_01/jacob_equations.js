@@ -1,4 +1,4 @@
-var equations = [
+var jacob_equations = [
 
   {
     equation:`NA`,
