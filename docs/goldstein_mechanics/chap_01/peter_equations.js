@@ -1,4 +1,4 @@
-var equations = [
+var peter_equations = [
 //page 11 makes me think the type setting in the pdf is just rubbish
   {
     equation:`

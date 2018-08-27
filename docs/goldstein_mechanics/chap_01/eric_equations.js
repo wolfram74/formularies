@@ -1,4 +1,4 @@
-var equations = [
+var eric_equations = [
 
   {
     equation:`NA`,
