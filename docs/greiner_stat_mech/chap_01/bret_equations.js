@@ -1,44 +1,4 @@
-var eric_equations = [
-
-  {
-    equation:`NA`,
-    id:"01.026",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
-  },
-
-  {
-    equation:`NA`,
-    id:"01.027",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
-  },
-
-  {
-    equation:`NA`,
-    id:"01.028",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
-  },
-
-  {
-    equation:`NA`,
-    id:"01.029",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
-  },
-
-  {
-    equation:`NA`,
-    id:"01.030",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
-  },
+var bret_equations = [
 
   {
     equation:`NA`,
@@ -155,46 +115,6 @@ var eric_equations = [
   {
     equation:`NA`,
     id:"01.045",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
-  },
-
-  {
-    equation:`NA`,
-    id:"01.046",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
-  },
-
-  {
-    equation:`NA`,
-    id:"01.047",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
-  },
-
-  {
-    equation:`NA`,
-    id:"01.048",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
-  },
-
-  {
-    equation:`NA`,
-    id:"01.049",
-    bookPage:"NA",
-    label:"NA",
-    description:"NA",
-  },
-
-  {
-    equation:`NA`,
-    id:"01.050",
     bookPage:"NA",
     label:"NA",
     description:"NA",
