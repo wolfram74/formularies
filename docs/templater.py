@@ -6,7 +6,7 @@ import sys
 import os
 chap_num, equation_count = [ int(num) for num in sys.argv[-2:]]
 print(chap_num, equation_count)
-collaborators = ['jacob', 'eric', 'peter']
+collaborators = ['peter']
 sub_count = equation_count/len(collaborators)
 remainder = equation_count % len(collaborators)
 equation_template = '''
