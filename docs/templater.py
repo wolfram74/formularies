@@ -19,7 +19,7 @@ sub_equations_count = [ int(num) for num in sys.argv[2:]]
 
 print(chap_num, sub_equations_count)
 
-collaborators = ['jacob', 'eric', 'bret', 'peter']
+collaborators = [ 'peter']
 
 total_equations = sum(sub_equations_count)
 sub_count = total_equations/len(collaborators)
